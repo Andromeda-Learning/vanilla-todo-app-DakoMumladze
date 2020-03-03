@@ -1,10 +1,10 @@
 let inputText = document.querySelector('.main-input')
 let itemsCont = document.querySelector('.items')
 
-function addItem() {
-    createListItem()
-    clearInput()
-}
+// function addItem() {
+//     createListItem()
+//     clearInput()
+// }
 
 function createListItem() {
     if(inputText.value !== "") {
