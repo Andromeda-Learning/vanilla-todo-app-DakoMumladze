@@ -7,8 +7,10 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <input type="text" placeholder="add to do" class="main-input">
-    <button type="submit" onclick="addItem()">Add</button>
+    <form onsubmit="addItem(event)">
+        <input type="text" placeholder="add to do" class="main-input">
+        <button type="submit">Add</button>
+    </form>
     <ul class="items"></ul>
     <script src="main.js"></script>
 </body>

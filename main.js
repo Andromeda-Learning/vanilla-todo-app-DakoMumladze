@@ -1,17 +1,20 @@
 let inputText = document.querySelector('.main-input')
 let itemsCont = document.querySelector('.items')
 
-function addItem() {
+function addItem(event) {
     createListItem()
     clearInput()
+    event.preventDefault()
 }
 
 function createListItem() {
-    if(inputText.value !== "") {
-        let createdItem = document.createElement('li')
-        let createdItemText = document.createTextNode(inputText.value)
+    if(inputText.value.trim() !== "") {
+        const inputTextTrimmed = inputText.value.trim()
+        const createdItem = document.createElement('li')
+        const createdItemText = document.createTextNode(inputTextTrimmed)
         createdItem.appendChild(createdItemText)
         itemsCont.appendChild(createdItem)
+        inputText.classList.remove('error')
     }
     else {
         inputText.classList.add('error')
