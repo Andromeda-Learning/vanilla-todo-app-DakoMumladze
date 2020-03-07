@@ -42,7 +42,7 @@ function deleteListItem() {
     itemsCont.removeChild(this.parentNode)
 }
 function editListItem() {
-    editeditem = prompt('Edit the item')
+    const editeditem = prompt('Edit the item')
     this.parentNode.childNodes[0].innerHTML = editeditem
 }
 
