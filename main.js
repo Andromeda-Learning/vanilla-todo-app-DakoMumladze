@@ -1,5 +1,5 @@
-let inputText = document.querySelector('.main-input')
-let itemsCont = document.querySelector('.items')
+const inputText = document.querySelector('.main-input')
+const itemsCont = document.querySelector('.items')
 
 function addItem(event) {
     createListItem()
