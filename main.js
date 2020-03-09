@@ -1,5 +1,5 @@
-let inputText = document.querySelector('.main-input')
-let itemsCont = document.querySelector('.items')
+const inputText = document.querySelector('.main-input')
+const itemsCont = document.querySelector('.items')
 
 function addItem(event) {
     createListItem()
@@ -38,11 +38,11 @@ function clearInput() {
 }
 
 
-function deleteListItem() {
-    itemsCont.removeChild(this.parentNode)
+function deleteListItem(event) {
+    itemsCont.removeChild(event.target.parentNode)
 }
-function editListItem() {
+function editListItem(event) {
     const editeditem = prompt('Edit the item')
-    this.parentNode.childNodes[0].innerHTML = editeditem
+    event.target.parentNode.childNodes[0].innerHTML = editeditem
 }
 
